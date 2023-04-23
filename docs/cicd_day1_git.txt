@@ -1,0 +1,150 @@
+박승필 강사
+
+
+devops tool chain
+
+버전제어
+VCS - 협업 : Central VCS Server - 분산 : DVCS (Git)
+
+Snapshots, Not Differences : 변경분이 아니라, 전체 snapshot
+
+
+remote branch 
+변경snapshot은 무결성을 갖춤(sha1,난수)
+
+===============================================================
+3가지 directory
+.git (Repository) : clone
+working 
+stagiing - 인덱스,스테이징 영역
+===============================================================
+intelliJ
+
+three
+
+three .git
+
+git status
+echo 'new3' > new_file3
+git status
+> Untracked
+
+git add new_file3
+git status
+> M
+
+echo 'new4' > new file4
+git commit 
+
+
+tree .git
+
+===============================================================
+github
+create a new repository
+git code space
+extensions -> gitlens
+
+
+git init
+vim LICENSE
+
+git lifecycle
+관리되지 않고 있다 untracked 
+관리되고 있다 unmodified modified staged
+
+U mark to A -> 스테이징, 인덱스 추가
+
+추가나 수정후 git add
+
+===============================================================
+
+.gitignore
+
+staging area 생략하기  -a
+
+
+git rm PROJECTS.md  물리적 파일도 같이 삭제됨
+
+
+git log 로 다음 항목을 좀 뽑아줘. -csv형식 -커미터,날짜,커밋메시지,해시번호 포함하는 git command 알려줘
+
+
+
+git push origin main
+
+ 
+
+git pull > fetch + merge
+
+@joongjin ➜ /workspaces/day1 (main) $ git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+@joongjin ➜ /workspaces/day1 (main) $ git branch testing
+@joongjin ➜ /workspaces/day1 (main) $ git branch
+* main
+  testing
+@joongjin ➜ /workspaces/day1 (main) $ 
+
+
+git branch -D testing  강제 삭제
+-d soft delete
+
+git push origin
+
+
+===============================================================
+git 충돌  해결 방법 ? index.html 
+
+===============================================================
+git pull --rebase
+
+
+$ git checkout main
+$ echo 'C1' > C1 && git add C1 && git commit -m 'C1'
+$ echo 'C2' > C2 && git add C2 && git commit -m 'C2'
+$ git checkout -b server
+$ echo 'C3' > C3 && git add C3 && git commit -m 'C3'
+$ git checkout -b client
+$ echo 'C8' > C8 && git add C8 && git commit -m 'C8'
+$ echo 'C9' > C9 && git add C9 && git commit -m 'C9'
+$ git checkout server
+$ echo 'C4' > C4 && git add C4 && git commit -m 'C4'
+$ echo 'C10' > C10 && git add C10 && git commit -m 'C10'
+$ git checkout main
+$ echo 'C5' > C5 && git add C5 && git commit -m 'C5'
+$ echo 'C6' > C6 && git add C6 && git commit -m 'C6'
+
+===============================================================
+git flow
+
+git merge hotfix/1 --no-ff    // no-ff 옵션은 그래프 깨지지 않게... 반드시 붙이는게 좋다...
+
+
+git stash 임시 보관
+
+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
+
+
+$ git config --global user.name "joongjin"
+$ git config --global user.email "joongjin.park@gmail.com"
+
+https://github.com/joongjin/day1.git
+
+git remote add origin https://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@github.com/joongjin/day1
+
+
+===============================================================
+git push --set-upstream origin main
+
+
+
+pull request template
+===============================================================
+.github/pull_request_template.md
+
+
+https://www.w3schools.com/git/default.asp?remote=github
+
+
